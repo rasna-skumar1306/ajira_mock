@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Scada&display=swap");
+
+.footer {
+  position: relative;
+  bottom: 0;
+  color: #bbbbbb;
+  display: flex;
+  background-color: #333333;
+  padding: 3rem 1rem 1rem;
+  text-align: left;
+  width: 98%;
+  overflow-x: hidden;
+}
+
+.footer__links {
+  color: #bbbbbb;
+  margin-left: 200px;
+}
+
+.footer__link {
+  list-style: none;
+  margin-top: 1.3rem;
+}
+
+.footer__social {
+  text-align: center;
+  margin-left: 250px;
+}
+
+.footer__logo {
+  background-color: #e10000;
+  color: white;
+  height: 2.1rem;
+  font-size: 2.3rem;
+  font-family: "Scada", sans-serif;
+  padding: 1.2rem;
+}
+
+.footer__logoItem {
+  list-style: none;
+  font-size: 20px;
+}
+
+.footer__address {
+  margin-left: 250px;
+}
+
+.footer__addressHead {
+  color: #bbbbbb;
+}
+
+.footer__contacts {
+  margin-top: 2rem;
+}
+
+.footer__contactContent {
+  margin-left: 6px;
+}
+
+.footer__logosSocial {
+  display: flex;
+}
+
+.footer__logoSocial {
+  background-color: #333333;
+  margin: 5px 10px;
+  border-radius: 100%;
+  padding: 3px;
+}
+
+.stay {
+  margin: 1rem;
+}
+
+@media screen and (max-width: 1360px) {
+  .footer__links,
+  .footer__address,
+  .footer__social {
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .footer__links,
+  .footer__address,
+  .footer__social {
+    margin-left: 95px;
+  }
+  .footer__logo {
+    padding: 0.6rem;
+    height: 2.3rem;
+  }
+  .footer__logoItem {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .footer__links,
+  .footer__address,
+  .footer__social {
+    font-size: 12px;
+  }
+}

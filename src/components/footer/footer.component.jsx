@@ -3,15 +3,15 @@ import "./footer.styles.css";
 import {
   MailOutlined,
   PhoneOutlined,
-  FacebookFilled,
-  InstagramFilled,
-  YoutubeFilled,
+  FacebookOutlined,
+  InstagramOutlined,
+  YoutubeOutlined,
 } from "@ant-design/icons";
 
 const Footer = () => {
   const socialLogoStyles = {
     fontSize: "2.2rem",
-    borderRadius: "100%",
+    color: "#bbbbbb",
   };
 
   return (
@@ -23,15 +23,21 @@ const Footer = () => {
         <li className="footer__link">Technical & Privacy</li>
         <li className="footer__link">Order Status</li>
       </ul>
-      <div>
+      <div className="footer__social">
         <div className="footer__logo">
           <li className="footer__logoItem">MADE UP</li>
         </div>
-        <p>Stay in touch with us</p>
-        <div className="footer__logoSocial">
-          <FacebookFilled style={socialLogoStyles} />
-          <InstagramFilled style={socialLogoStyles} />
-          <YoutubeFilled style={socialLogoStyles} />
+        <p className="stay">Stay in touch with us</p>
+        <div className="footer__logosSocial">
+          <div className="footer__logoSocial">
+            <FacebookOutlined style={socialLogoStyles} />
+          </div>
+          <div className="footer__logoSocial">
+            <InstagramOutlined style={socialLogoStyles} />
+          </div>
+          <div className="footer__logoSocial">
+            <YoutubeOutlined style={socialLogoStyles} />
+          </div>
         </div>
       </div>
       <div className="footer__address">

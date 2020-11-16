@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Scada&display=swap");
+
+.header {
+  display: flex;
+  height: 70px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.199);
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+.header__logo {
+  background-color: #e10000;
+  width: 100px;
+  height: 100%;
+  margin-left: 70px;
+}
+
+.header__logo > h1 {
+  color: white;
+  font-size: 20px;
+  font-family: "Scada", sans-serif;
+  padding: 0.5rem;
+}
+
+.header__navlinks {
+  padding-top: 0.4rem;
+}
+
+.navlinks {
+  display: flex;
+}
+
+.navlink {
+  margin-left: 5rem;
+  list-style: none;
+}
+
+.header__icons {
+  font-size: 18px;
+  margin-left: 9rem;
+}
+
+.header__icons > .icon {
+  padding-top: 1.2rem;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 1360px) {
+  .header__logo {
+    margin-left: 40px;
+  }
+
+  .header__icons {
+    margin-left: 6rem;
+  }
+
+  .header__icons > .icon {
+    margin-left: 1rem;
+  }
+
+  .navlink {
+    margin-left: 5rem;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .header__logo {
+    margin-left: 25px;
+  }
+
+  .header__icons {
+    margin-left: 4rem;
+  }
+
+  .header__icons > .icon {
+    margin-left: 1rem;
+  }
+
+  .navlink {
+    margin-left: 3rem;
+  }
+}
