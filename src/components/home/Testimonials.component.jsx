@@ -1,6 +1,8 @@
 import React from "react";
 
+//this is again a functional component which display the testimonials
 const Testimonials = () => {
+  // here I have some hardcode info for the testimonials section
   const monials = [
     {
       author: "Vikas",
@@ -28,6 +30,7 @@ const Testimonials = () => {
     },
   ];
 
+  //svg for a star
   const Star = () => (
     <svg
       width="13"
@@ -43,6 +46,7 @@ const Testimonials = () => {
     </svg>
   );
 
+  //function to display all the testimonials in order
   const displayMonials = () =>
     monials.map((monial) => (
       <div className="monial__content" key={monial.id}>

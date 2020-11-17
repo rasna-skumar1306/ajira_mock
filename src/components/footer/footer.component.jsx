@@ -4,11 +4,12 @@ import {
   MailOutlined,
   PhoneOutlined,
   FacebookOutlined,
-  InstagramOutlined,
+  LinkedinOutlined,
   YoutubeOutlined,
-} from "@ant-design/icons";
+} from "@ant-design/icons"; //here I have imported only the icons from the ant design icons pack
 
 const Footer = () => {
+  //the below is a style which is being applied to the social media logos in the footer
   const socialLogoStyles = {
     fontSize: "2.2rem",
     color: "#bbbbbb",
@@ -16,13 +17,27 @@ const Footer = () => {
 
   return (
     <div className="footer">
+      {/* The below ul contains the list of links that you see in the footer */}
+      {/* I have only made static footer links which just change the url and doesnot change the pages */}
       <ul className="footer__links">
-        <li className="footer__link">About Us</li>
-        <li className="footer__link">Delivery Information</li>
-        <li className="footer__link">Returns & Exchange</li>
-        <li className="footer__link">Technical & Privacy</li>
-        <li className="footer__link">Order Status</li>
+        <li className="footer__link">
+          <a href="#AboutUs">About Us</a>
+        </li>
+        <li className="footer__link">
+          <a href="#DevliverInfo">Delivery Information</a>
+        </li>
+        <li className="footer__link">
+          <a href="#ReturnsAndExchange">Returns & Exchange</a>
+        </li>
+        <li className="footer__link">
+          <a href="#Technical">Technical & Privacy</a>
+        </li>
+        <li className="footer__link">
+          <a href="#Status">Order Status</a>
+        </li>
       </ul>
+
+      {/* The below div consist of the middle part of the footer i.e the logo and social media links */}
       <div className="footer__social">
         <div className="footer__logo">
           <li className="footer__logoItem">MADE UP</li>
@@ -30,16 +45,26 @@ const Footer = () => {
         <p className="stay">Stay in touch with us</p>
         <div className="footer__logosSocial">
           <div className="footer__logoSocial">
-            <FacebookOutlined style={socialLogoStyles} />
+            <a href="https://www.facebook.com/rasna5202">
+              {/*This is my facebook link  */}
+              <FacebookOutlined style={socialLogoStyles} />
+            </a>
           </div>
           <div className="footer__logoSocial">
-            <InstagramOutlined style={socialLogoStyles} />
+            <a href="https://www.linkedin.com/in/rasswanth-senthilkumar-2bb01b184/">
+              {/*This is my linkedin link  */}
+              <LinkedinOutlined style={socialLogoStyles} />
+            </a>
           </div>
           <div className="footer__logoSocial">
-            <YoutubeOutlined style={socialLogoStyles} />
+            <a href="https://www.youtube.com/channel/UCWd-LUdoLTjwgS5R7L_bv9A">
+              {/*This is my youtube channel link  */}
+              <YoutubeOutlined style={socialLogoStyles} />
+            </a>
           </div>
         </div>
       </div>
+      {/* The below div contains the address that you see in the footer */}
       <div className="footer__address">
         <h4 className="footer__addressHead">Our Corporate Office</h4>
         <p>
@@ -49,7 +74,14 @@ const Footer = () => {
         <div className="footer__contacts">
           <p>
             <MailOutlined />
-            <span className="footer__contactContent"> sales@derbymen.com</span>
+            <span className="footer__contactContent">
+              <a
+                href="mailto:rasna5202@gmail.com"
+                style={{ textDecoration: "none", color: "#bbbbbb" }}
+              >
+                {/*this is my email*/} rasna5202@gmail.com
+              </a>
+            </span>
           </p>
           <p>
             <PhoneOutlined />

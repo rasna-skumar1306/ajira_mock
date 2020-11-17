@@ -1,6 +1,7 @@
 import React from "react";
 import { EnvironmentOutlined } from "@ant-design/icons";
 
+//this is a funtional component which displays the subscribe mail input in the home page
 const Contact = () => {
   return (
     <div className="contact">

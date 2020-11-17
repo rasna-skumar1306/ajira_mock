@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Home />
+      <Home /> {/* contains the contents of the home page */}
       <Footer />
     </div>
   );

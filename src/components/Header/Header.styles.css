@@ -17,8 +17,14 @@
   margin-left: 70px;
 }
 
+.header__logo:hover {
+  height: 85px;
+  box-shadow: 1px 8px 4px 0 rgba(255, 0, 0, 0.534);
+}
+
 .header__logo > h1 {
   color: white;
+  cursor: pointer;
   font-size: 20px;
   font-family: "Scada", sans-serif;
   padding: 0.5rem;
@@ -28,57 +34,165 @@
   padding-top: 0.4rem;
 }
 
+.header__navlinksBurger {
+  display: none;
+}
+
 .navlinks {
   display: flex;
 }
 
 .navlink {
-  margin-left: 5rem;
+  height: 3rem;
+  margin-left: 4.6rem;
   list-style: none;
+  cursor: pointer;
+}
+
+.navlink > a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 4px;
+}
+
+.navlink > a:hover {
+  box-shadow: 0px 5px 0px 0 rgba(43, 43, 43, 0.418);
+}
+
+.navlink > a:focus {
+  color: #e10000;
+  box-shadow: 0px 5px 0px 0 rgba(43, 43, 43, 0.418);
 }
 
 .header__icons {
   font-size: 18px;
-  margin-left: 9rem;
+  margin-left: 8rem;
 }
 
 .header__icons > .icon {
-  padding-top: 1.2rem;
+  margin-top: 1.2rem;
+  height: 2rem;
   margin-left: 2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  font-size: 1.1rem;
+  padding: 0;
 }
 
-@media screen and (max-width: 1360px) {
+.header__icons > .icon:hover {
+  box-shadow: 0px 5px 0px 0 rgba(43, 43, 43, 0.418);
+}
+
+.header__icons > .icon:focus {
+  color: #e10000;
+  outline: none;
+  box-shadow: 0px 5px 0px 0 rgba(43, 43, 43, 0.418);
+}
+
+@media screen and (max-width: 1400px) {
   .header__logo {
     margin-left: 40px;
   }
 
   .header__icons {
-    margin-left: 6rem;
+    margin-left: 5rem;
   }
 
   .header__icons > .icon {
-    margin-left: 1rem;
+    margin-left: 1.6rem;
   }
 
   .navlink {
-    margin-left: 5rem;
+    margin-left: 4.6rem;
   }
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1305px) {
   .header__logo {
     margin-left: 25px;
   }
 
   .header__icons {
-    margin-left: 4rem;
+    margin-left: 3rem;
   }
 
   .header__icons > .icon {
-    margin-left: 1rem;
+    margin-left: 1.4rem;
   }
 
   .navlink {
-    margin-left: 3rem;
+    margin-left: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .header__logo {
+    margin-left: 10px;
+  }
+
+  .header__icons {
+    margin-left: 1.4rem;
+  }
+
+  .header__icons > .icon {
+    margin-left: 1.2rem;
+  }
+
+  .navlink {
+    margin-left: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .header__navlinks {
+    display: none;
+  }
+  .header__icons {
+    margin: 0 1px 0 auto;
+  }
+  .header__navlinksBurger {
+    display: grid;
+    padding: 1.6rem 0;
+    margin: 0 30px 0;
+  }
+
+  .header__navlinksBurger > .icon {
+    border: none;
+    background-color: #ffffff;
+  }
+
+  .header__navlinksBurger > .icon:hover {
+    box-shadow: 0 2px 0 0 #747474a8;
+  }
+
+  .header__navlinksBurger > .icon:focus {
+    outline: none;
+  }
+
+  .burger__menu > .burger__links > .navlinks {
+    background: #8f5f5fad;
+    margin: 0;
+  }
+
+  .burger__links > .navlinks {
+    display: grid;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    padding: 2rem 3rem 1rem;
+  }
+
+  .burger__links > .navlinks > .navlink {
+    margin: 0.7rem auto;
+  }
+
+  .burger__links > .navlinks > .navlink > a:hover {
+    box-shadow: 0px 5px 0px 0 rgba(43, 43, 43, 0.418);
+  }
+
+  .burger__links > .navlinks > .navlink > a:focus {
+    color: #ffffff;
+    box-shadow: 0px 5px 0px 0 rgba(43, 43, 43, 0.418);
   }
 }

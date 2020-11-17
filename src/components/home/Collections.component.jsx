@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.styles.css";
 
+//this is a functional component which display the first 4 pictures in the home page
 const Collections = () => {
   return (
     <div className="collections">
@@ -18,7 +19,7 @@ const Collections = () => {
       <div className="collections__grid">
         <div className="collections__two">
           <div className="contents">
-            <h2 style={{ marginTop: "340px" }}>
+            <h2 className="first">
               <span className="highlight">Summer </span>is here andrespire
             </h2>
             <h2>

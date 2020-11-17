@@ -22,6 +22,15 @@
   margin-top: 1.3rem;
 }
 
+.footer__link > a {
+  text-decoration: none;
+  color: #bbbbbb;
+}
+
+.footer__link a:hover {
+  box-shadow: 0px 5px 0px 0 rgba(133, 133, 133, 0.418);
+}
+
 .footer__social {
   text-align: center;
   margin-left: 250px;
@@ -34,6 +43,11 @@
   font-size: 2.3rem;
   font-family: "Scada", sans-serif;
   padding: 1.2rem;
+  cursor: pointer;
+}
+
+.footer__logo:hover {
+  box-shadow: 1px 10px 4px 0 rgba(14, 14, 14, 0.377);
 }
 
 .footer__logoItem {
@@ -57,22 +71,31 @@
   margin-left: 6px;
 }
 
+.footer__contactContent > a:hover {
+  box-shadow: 0 2px 0 0 #bbbbbb8c;
+}
+
 .footer__logosSocial {
   display: flex;
+  width: 100%;
 }
 
 .footer__logoSocial {
   background-color: #333333;
   margin: 5px 10px;
-  border-radius: 100%;
   padding: 3px;
+  cursor: pointer;
+}
+
+.footer__logoSocial:hover {
+  box-shadow: 0 4px 0 0 rgba(138, 138, 138, 0.493);
 }
 
 .stay {
   margin: 1rem;
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1380px) {
   .footer__links,
   .footer__address,
   .footer__social {
@@ -87,11 +110,11 @@
     margin-left: 95px;
   }
   .footer__logo {
-    padding: 0.6rem;
-    height: 2.3rem;
+    padding: 0.3rem;
+    height: 1.5rem;
   }
   .footer__logoItem {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -100,5 +123,48 @@
   .footer__address,
   .footer__social {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .footer__links,
+  .footer__address,
+  .footer__social {
+    margin-left: 65px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .footer {
+    display: grid;
+    text-align: center;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .footer__link {
+    margin: 14px 0;
+  }
+
+  .footer__links,
+  .footer__address,
+  .footer__social {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  .footer__logo {
+    background-color: #e10000;
+    color: white;
+    height: 1rem;
+    font-size: 1rem;
+    font-family: "Scada", sans-serif;
+    padding: 0.2rem;
+    width: 5rem;
+    margin: 0 auto;
+  }
+
+  .footer__logosSocial {
+    width: 100%;
+    justify-content: center;
   }
 }

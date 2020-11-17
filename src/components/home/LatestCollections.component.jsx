@@ -1,6 +1,8 @@
 import React from "react";
 
+//this is a functional component which displays the pictues seen in the latest collections section in the home page
 const LatestCollections = () => {
+  //here I have some hardcoded info of the collections that are available
   const collections = [
     {
       img:
@@ -39,6 +41,7 @@ const LatestCollections = () => {
     },
   ];
 
+  // functions for displaying the latest collections contents in the page
   const displayCollections = () =>
     collections.map((collection) => (
       <div className="collection__content" key={collection.id}>
