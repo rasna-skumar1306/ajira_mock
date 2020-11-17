@@ -4,7 +4,7 @@ In this task, I have made a static mock site in order to showcase my knowledge i
 
 ## Completion of the task
 
-**_I have only completed a single page in the mockup due to limited time constraints._**
+**I have only completed a single page in the mockup due to limited time constraints.**
 
 ## Things that I have developed
 
