@@ -51,7 +51,7 @@ const Header = () => {
         <div className="header__navlinks">
           <ul className="navlinks">
             <li className="navlink">
-              <a href="#ForMe" id="/" onClick={(e) => changePage(e)}>
+              <a href="/" id="/" onClick={(e) => changePage(e)}>
                 For Me
               </a>
             </li>
