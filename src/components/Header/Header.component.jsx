@@ -6,10 +6,13 @@ import {
   UserOutlined,
   MenuOutlined,
 } from "@ant-design/icons"; // here I have imported some necessary icons from ant design icons pack
+import { useDispatch } from "react-redux";
+import { setCurrentPage } from "../../actions";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false); //state for setting the burger menu open
   const [windowSize, setWindowSize] = useState(window.innerWidth); // state for keeping a track of window width
+  const dispatch = useDispatch();
 
   //I have made use of useEffect hook to keep a track of screen width
   useEffect(() => {
@@ -23,36 +26,64 @@ const Header = () => {
     window.addEventListener("resize", handleResize); // eventlistener to listen for any screen resize
   }, [windowSize]); // re-renders if the windowSize changes
 
+  const changePage = (e) => {
+    const page = e.target.id;
+    dispatch(setCurrentPage(page));
+  };
+
   return (
     <>
       <div className="header">
         <div className="header__logo">
           {/* Logo that you see in the nav bar */}
-          <h1>MADE UP</h1>
+          <h1>
+            <a
+              href="/"
+              id="/"
+              onClick={(e) => changePage(e)}
+              style={{ textDecoration: "none", color: "#ffffff" }}
+            >
+              MADE UP
+            </a>
+          </h1>
         </div>
-        {/*the below div contains only static links that doesnot change the page, it just change the url */}
+        {/*the below div contains links that change the page and also changes the url */}
         <div className="header__navlinks">
           <ul className="navlinks">
             <li className="navlink">
-              <a href="#ForMe">For Me</a>
+              <a href="#ForMe" id="/" onClick={(e) => changePage(e)}>
+                For Me
+              </a>
             </li>
             <li className="navlink">
-              <a href="#Jeans">Jeans</a>
+              <a href="#Jeans" id="/Jeans" onClick={(e) => changePage(e)}>
+                Jeans
+              </a>
             </li>
             <li className="navlink">
-              <a href="#Shirts">Shirts</a>
+              <a href="#Shirts" id="/Shirts" onClick={(e) => changePage(e)}>
+                Shirts
+              </a>
             </li>
             <li className="navlink">
-              <a href="#T-shirts">T-Shirts</a>
+              <a href="#T-shirts" id="/T-shirts" onClick={(e) => changePage(e)}>
+                T-Shirts
+              </a>
             </li>
             <li className="navlink">
-              <a href="#Trousers">Trousers</a>
+              <a href="#Trousers" id="/Trousers" onClick={(e) => changePage(e)}>
+                Trousers
+              </a>
             </li>
             <li className="navlink">
-              <a href="#Joggers">Joggers</a>
+              <a href="#Joggers" id="/Joggers" onClick={(e) => changePage(e)}>
+                Joggers
+              </a>
             </li>
             <li className="navlink">
-              <a href="#Shorts">Shorts</a>
+              <a href="#Shorts" id="/Shorts" onClick={(e) => changePage(e)}>
+                Shorts
+              </a>
             </li>
           </ul>
         </div>
@@ -84,25 +115,47 @@ const Header = () => {
           <div className="burger__links">
             <ul className="navlinks">
               <li className="navlink">
-                <a href="#ForMe">For Me</a>
+                <a href="#ForMe" id="/" onClick={(e) => changePage(e)}>
+                  For Me
+                </a>
               </li>
               <li className="navlink">
-                <a href="#Jeans">Jeans</a>
+                <a href="#Jeans" id="/Jeans" onClick={(e) => changePage(e)}>
+                  Jeans
+                </a>
               </li>
               <li className="navlink">
-                <a href="#Shirts">Shirts</a>
+                <a href="#Shirts" id="/Shirts" onClick={(e) => changePage(e)}>
+                  Shirts
+                </a>
               </li>
               <li className="navlink">
-                <a href="#T-shirts">T-Shirts</a>
+                <a
+                  href="#T-shirts"
+                  id="/T-shirts"
+                  onClick={(e) => changePage(e)}
+                >
+                  T-Shirts
+                </a>
               </li>
               <li className="navlink">
-                <a href="#Trousers">Trousers</a>
+                <a
+                  href="#Trousers"
+                  id="/Trousers"
+                  onClick={(e) => changePage(e)}
+                >
+                  Trousers
+                </a>
               </li>
               <li className="navlink">
-                <a href="#Joggers">Joggers</a>
+                <a href="#Joggers" id="/Joggers" onClick={(e) => changePage(e)}>
+                  Joggers
+                </a>
               </li>
               <li className="navlink">
-                <a href="#Shorts">Shorts</a>
+                <a href="#Shorts" id="/Shorts" onClick={(e) => changePage(e)}>
+                  Shorts
+                </a>
               </li>
             </ul>
           </div>

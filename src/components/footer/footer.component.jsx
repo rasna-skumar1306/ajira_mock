@@ -8,11 +8,22 @@ import {
   YoutubeOutlined,
 } from "@ant-design/icons"; //here I have imported only the icons from the ant design icons pack
 
+import { useDispatch } from "react-redux";
+import { setCurrentPage } from "../../actions";
+
 const Footer = () => {
   //the below is a style which is being applied to the social media logos in the footer
   const socialLogoStyles = {
     fontSize: "2.2rem",
     color: "#bbbbbb",
+  };
+
+  const dispatch = useDispatch();
+
+  //changes the page
+  const changePage = (e) => {
+    const page = e.target.id;
+    dispatch(setCurrentPage(page));
   };
 
   return (
@@ -21,16 +32,18 @@ const Footer = () => {
       {/* I have only made static footer links which just change the url and doesnot change the pages */}
       <ul className="footer__links">
         <li className="footer__link">
-          <a href="#AboutUs">About Us</a>
+          <a href="https://www.linkedin.com/in/rasswanth-senthilkumar-2bb01b184/">
+            About Us
+          </a>
         </li>
         <li className="footer__link">
-          <a href="#DevliverInfo">Delivery Information</a>
+          <a href="https://github.com/rasna-skumar1306">Delivery Information</a>
         </li>
         <li className="footer__link">
           <a href="#ReturnsAndExchange">Returns & Exchange</a>
         </li>
         <li className="footer__link">
-          <a href="#Technical">Technical & Privacy</a>
+          <a href="https://github.com/rasna-skumar1306">Technical & Privacy</a>
         </li>
         <li className="footer__link">
           <a href="#Status">Order Status</a>
@@ -40,7 +53,16 @@ const Footer = () => {
       {/* The below div consist of the middle part of the footer i.e the logo and social media links */}
       <div className="footer__social">
         <div className="footer__logo">
-          <li className="footer__logoItem">MADE UP</li>
+          <li className="footer__logoItem">
+            <a
+              href="/"
+              id="/"
+              onClick={(e) => changePage(e)}
+              style={{ textDecoration: "none", color: "#ffffff" }}
+            >
+              MADE UP
+            </a>
+          </li>
         </div>
         <p className="stay">Stay in touch with us</p>
         <div className="footer__logosSocial">
